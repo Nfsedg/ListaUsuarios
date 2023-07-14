@@ -1,6 +1,5 @@
 ﻿using ProyectooFinal.CONTEXT;
 using ProyectooFinal.ENTITIES;
-using ProyectooFinal.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

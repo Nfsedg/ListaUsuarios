@@ -25,9 +25,16 @@ namespace ProyectooFinal.VISTAS
         {
             InitializeComponent();
             GetUserTable();
+            getRoles();
         }
 
         UsuarioServices services = new UsuarioServices();
+        public void getRoles()
+        {
+            SelectName.ItemsSource = services.getRoles();
+            SelectName.DisplayMemberPath = "Nombre";
+            SelectName.SelectedValuePath = "PkRol";
+        }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -47,15 +54,18 @@ namespace ProyectooFinal.VISTAS
 
         public void editItem(object sender, RoutedEventArgs e)
         {
-            Usuario usuario = new Usuario
-                usuario  = (sender as FrameworkContentElement).DataContext as Usuario;
-            txtPkUser.Text = usuario.PkUsuario
-            txtNombre.Text
+            //usuario  = (sender as FrameworkContentElement).DataContext as Usuario;
+            // Editar y eliminar
+            Usuario usuario = new Usuario();
+            txtId.Text = usuario.PkUsuario.ToString();
+            txtNombre.Text = usuario.Nombre;
             txtUserName.Text = usuario.UserName;
         }
         public void GetUserTable()
         {
             UserTable.ItemsSource = services.getUsuarios();
         }
+        
+
     }
 }

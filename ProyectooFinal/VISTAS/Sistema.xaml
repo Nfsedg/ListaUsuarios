@@ -40,6 +40,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <TextBox HorizontalAlignment="Left" Margin="50,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="21" IsEnabled="False"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="50,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="21" IsEnabled="False"/>
+        <ComboBox x:Name="SelectName" Margin="53,302,650,111"/>
     </Grid>
 </Window>
